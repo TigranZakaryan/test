@@ -19,7 +19,9 @@ export default class App extends Component<Props> {
     return (
       
       <View style={styles.container}>
-      <Text style={{paddingVertical: 100, fontSize: 50 }}> 0.0 </Text>
+        <View style={{borderWidth: 2, borderRadius: 6, borderBottomColor: '#fff'}}>
+          <Text style={{ paddingVertical: 100, fontSize: 50 }}> 0.0 </Text>
+      </View>
         <View style={styles.generalButtons}>
           <View style={{ flex: 1}}>
             <Button title='AC'/>
