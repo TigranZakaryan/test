@@ -8,8 +8,8 @@
 
 import React from 'react'
 import { Component } from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
-import { Button } from 'react-native-elements';
+import {Platform, StyleSheet, Text, View, ImageBackground} from 'react-native';
+import { Button, Icon } from 'react-native-elements';
 
 
 
@@ -19,85 +19,143 @@ export default class App extends Component<Props> {
     return (
       
       <View style={styles.container}>
-        <View style={{borderWidth: 2, borderRadius: 6, borderColor: 'black', width: 350}}>
+        <View style={{borderWidth: 2, borderRadius: 6, borderColor: 'black', width: "95%"}}>
           <Text style={{ padding: 10, fontSize: 50, textAlign: "right"}}> 0 </Text>
       </View>
-      <Text style={{paddingVertical: 40}}> </Text>
+      <Text style={[{ paddingBottom: "20%", paddingTop: "10%"}]}> </Text>
         <View style={styles.generalButtons}>
-          <View style={{ flex: 1}}>
-            <Button title='AC'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='AC'
+              buttonStyle={{
+                backgroundColor: "orange",
+              }} />
           </View>
-          <View style={{ flex: 1}}>
-            <Button title='+/-'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='+/-'
+              buttonStyle={{
+                backgroundColor: "orange",
+              }} />
           </View>
-          <View style={{ flex: 1 }}>
-            <Button title='%'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='%'
+              buttonStyle={{
+                backgroundColor: "orange",
+              }} />
           </View>
-          <View style={{ flex: 1 }}>
-            <Button title='/'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='/'
+              buttonStyle={{
+                backgroundColor: "orange",
+              }} />
           </View>
         </View>
         <View>
           <Text> </Text>
         </View>
         <View style={styles.generalButtons}>
-          <View style={{ flex: 1}}>
-            <Button title='1'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='1'
+            buttonStyle={{
+              backgroundColor: "gray",
+              }}/>
           </View>
-          <View style={{ flex: 1}}>
-            <Button title='2'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='2'
+              buttonStyle={{
+                backgroundColor: "gray",
+              }} />
           </View>
-          <View style={{ flex: 1 }}>
-            <Button title='3'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='3'
+              buttonStyle={{
+                backgroundColor: "gray",
+              }} />
           </View>
-          <View style={{ flex: 1 }}>
-            <Button title='*'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='*'
+              buttonStyle={{
+                backgroundColor: "orange",
+              }} />
           </View>
         </View>
         <View>
-          <Text> </Text>
+        <Text> </Text>
         </View>
         <View style={styles.generalButtons}>
-          <View style={{ flex: 1}}>
-            <Button title='4'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='4'
+              buttonStyle={{
+                backgroundColor: "gray",
+              }} />
           </View>
-          <View style={{ flex: 1}}>
-            <Button title='5'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='5'
+              buttonStyle={{
+                backgroundColor: "gray",
+              }} />
           </View>
-          <View style={{ flex: 1 }}>
-            <Button title='6'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='6'
+              buttonStyle={{
+                backgroundColor: "gray",
+              }} />
           </View>
-          <View style={{ flex: 1 }}>
-            <Button title='-'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='-'
+              buttonStyle={{
+                backgroundColor: "orange",
+              }} />
           </View>
         </View>
         <Text> </Text>
         <View style={styles.generalButtons}>
-          <View style={{ flex: 1}}>
-            <Button title='1'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='1'
+              buttonStyle={{
+                backgroundColor: "gray",
+              }} />
           </View>
-          <View style={{ flex: 1}}>
-            <Button title='2'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='2'
+              buttonStyle={{
+                backgroundColor: "gray",
+              }} />
           </View>
-          <View style={{ flex: 1 }}>
-            <Button title='4'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='4'
+              buttonStyle={{
+                backgroundColor: "gray",
+              }} />
           </View>
-          <View style={{ flex: 1 }}>
-            <Button title='+'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='+'
+              buttonStyle={{
+                backgroundColor: "orange",
+              }} />
           </View>
         </View>
         <Text> </Text>
         <View style={styles.generalButtons}>
-          <View style={{ flex: 2}}>
-            <Button title='0'/>
+          <View style={[styles.mainButtons, {flex: 2}]}>
+            <Button raised title='0'
+              buttonStyle={{
+                backgroundColor: "gray",
+              }} />
           </View>
-          <View style={{ flex: 1}}>
-            <Button title='.'/>
+          <View style={styles.mainButtons}>
+            <Button raised title='.'
+              buttonStyle={{
+                backgroundColor: "gray",
+              }} />
           </View>
-          <View style={{ flex: 1 }}>
-            <Button title='='/>
+          <View style={styles.mainButtons}>
+            <Button raised title='='
+              buttonStyle={{
+                backgroundColor: "orange",
+              }} />
           </View>
         </View>
+        <Text style={{paddingBottom: "2%"}}> </Text>
       </View>
     );
   } 
@@ -114,6 +172,10 @@ const styles = StyleSheet.create({
   generalButtons: {
     flexDirection: 'row', 
     alignItems: 'center',
-  }
+  },
+
+  mainButtons: {
+    flex: 1,
+  },
 
 });
