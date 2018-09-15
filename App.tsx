@@ -20,7 +20,7 @@ export default class App extends Component<Props> {
       
       <View style={styles.container}>
         <View style={{borderWidth: 2, borderRadius: 6, borderColor: 'black', width: 350}}>
-          <Text style={{ padding: 10, fontSize: 50, textAlign: "right"}}> 0.0 </Text>
+          <Text style={{ padding: 10, fontSize: 50, textAlign: "right"}}> 0 </Text>
       </View>
       <Text style={{paddingVertical: 40}}> </Text>
         <View style={styles.generalButtons}>
