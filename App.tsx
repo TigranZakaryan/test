@@ -8,26 +8,37 @@
 
 import React from 'react'
 import { Component } from 'react';
-import {Platform, StyleSheet, Text, View, ImageBackground} from 'react-native';
+import {Platform, StyleSheet, Text, View, Alert} from 'react-native';
 import { Button, Icon } from 'react-native-elements';
 
 
+let a: any = 0
+let b: number = 2
 
 
 export default class App extends Component<Props> {
+
+  _onPressButton() {
+    Alert.alert('You tapped the button!')
+    return a + b;
+  }
+
   render() {
     return (
       
       <View style={styles.container}>
         <View style={{borderWidth: 2, borderRadius: 6, borderColor: 'black', width: "95%"}}>
-          <Text style={{ padding: 10, fontSize: 50, textAlign: "right"}}> 0 </Text>
+          <Text style={{ padding: 10, fontFamily: 'arial', fontSize: 50, color: 'black', textAlign: "right"}}>
+            0
+           </Text>
       </View>
-      <Text style={[{ paddingBottom: "20%", paddingTop: "10%"}]}> </Text>
+      <Text style={[{ paddingBottom: "20%", paddingTop: 20}]}> </Text>
         <View style={styles.generalButtons}>
           <View style={styles.mainButtons}>
-            <Button raised title='AC'
+            <Button raised title='C'
+              onPress={this._onPressButton}
               buttonStyle={{
-                backgroundColor: "orange",
+                backgroundColor: "red",
               }} />
           </View>
           <View style={styles.mainButtons}>
@@ -50,7 +61,7 @@ export default class App extends Component<Props> {
           </View>
         </View>
         <View>
-          <Text> </Text>
+          
         </View>
         <View style={styles.generalButtons}>
           <View style={styles.mainButtons}>
@@ -79,7 +90,7 @@ export default class App extends Component<Props> {
           </View>
         </View>
         <View>
-        <Text> </Text>
+        
         </View>
         <View style={styles.generalButtons}>
           <View style={styles.mainButtons}>
@@ -107,7 +118,7 @@ export default class App extends Component<Props> {
               }} />
           </View>
         </View>
-        <Text> </Text>
+        
         <View style={styles.generalButtons}>
           <View style={styles.mainButtons}>
             <Button raised title='1'
@@ -134,7 +145,7 @@ export default class App extends Component<Props> {
               }} />
           </View>
         </View>
-        <Text> </Text>
+      
         <View style={styles.generalButtons}>
           <View style={[styles.mainButtons, {flex: 2}]}>
             <Button raised title='0'
@@ -155,7 +166,6 @@ export default class App extends Component<Props> {
               }} />
           </View>
         </View>
-        <Text style={{paddingBottom: "2%"}}> </Text>
       </View>
     );
   } 
@@ -176,6 +186,7 @@ const styles = StyleSheet.create({
 
   mainButtons: {
     flex: 1,
+    paddingBottom: 20,
   },
 
 });
